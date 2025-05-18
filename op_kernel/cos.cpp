@@ -43,8 +43,8 @@ private:
                                                 uint32_t processDataNum);
 
 private:
-    AscendC::TQue<AscendC::QuePosition::VECIN, BUFFER_NUM> inQueueX;
-    AscendC::TQue<AscendC::QuePosition::VECOUT, BUFFER_NUM> outQueueY;
+    AscendC::TQue<AscendC::QuePosition::VECIN, 1> inQueueX;
+    AscendC::TQue<AscendC::QuePosition::VECOUT, 1> outQueueY;
     AscendC::TBuf<AscendC::QuePosition::VECCALC> xBuf, yBuf;
     AscendC::GlobalTensor<T> xGm;
     AscendC::GlobalTensor<T> yGm;
