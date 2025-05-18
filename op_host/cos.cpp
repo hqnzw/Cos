@@ -16,6 +16,7 @@
 #include "graph/utils/type_utils.h"
 #include "tiling/platform/platform_ascendc.h"
 #include <algorithm>
+#include <cmath>
 
 namespace optiling {
 constexpr uint32_t BLOCK_SIZE = 32;
