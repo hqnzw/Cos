@@ -39,7 +39,7 @@ static ge::graphStatus TilingFunc(gert::TilingContext* context)
     uint32_t blockElemNum = BLOCK_SIZE / xTypeLength;
 
     uint32_t inputBlockNum = (inputNum / blockElemNum) + (inputNum % blockElemNum != 0);
-    coreNum = std::max(std::min(coreNum, inputBlockNum), 1u);
+    coreNum = std::max(std::min(coreNum, (uint32_t)std::sqrt(0.4f * inputBlockNum)), 1u);
     uint32_t smallCoreBlockNum = inputBlockNum / coreNum;
     uint32_t bigCoreNum = inputBlockNum % coreNum;
 
